@@ -63,11 +63,7 @@ INSTALLED_APPS = [
     'apps.mail',
     'apps.socialmedia',
     'apps.user',
-    'apps.workers',
-
-    # ___CHANGEME___
-    # Example apps
-    'apps.workerexample',
+    'apps.workers'
 ]
 
 MIDDLEWARE = [
@@ -110,7 +106,7 @@ else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'django',  # ___CHANGEME___
+            'NAME': 'markit',
             'USER': 'postgres',
             'PASSWORD': 'postgres'
         },
@@ -261,7 +257,7 @@ AWS_QUERYSTRING_AUTH = False
 # ==================================================================================================
 
 
-APP_NAME = '___CHANGEME___'
+APP_NAME = 'MARK-IT'
 ADMIN_TITLE = 'Admin'
 ADMIN_HEADER = 'Admin'
 
@@ -301,8 +297,8 @@ EMAIL_PROVIDER = os.environ.get('EMAIL_PROVIDER', 'smtp')  # 'smtp' or 'sendgrid
 
 WEB_URL = get('WEB_URL')
 RESET_PASSWORD_URL = '{}{}'.format(WEB_URL, '/reset-password/{reset_token}/{user_id}')
-DEFAULT_FROM_EMAIL = '___CHANGEME___@example.org'
-DEFAULT_FROM_NAME = '___CHANGEME___'
+DEFAULT_FROM_EMAIL = 'system@smashingmouse.com'
+DEFAULT_FROM_NAME = 'System'
 
 if EMAIL_PROVIDER == 'smtp':
     EMAIL_HOST = get('SMTP_SERVER')
