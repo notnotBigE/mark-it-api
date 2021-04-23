@@ -16,7 +16,13 @@ python -m venv env
 ```
 
 Install requirements:
-
+for Arch first
+```
+sudo pacman -Sy gcc
+sudo pacman -S postgresql
+pip install psycopg2-binary
+```
+then
 ```
 pip install -r requirements.txt
 ```
