@@ -63,7 +63,8 @@ INSTALLED_APPS = [
     'apps.mail',
     'apps.socialmedia',
     'apps.user',
-    'apps.workers'
+    'apps.workers',
+    'apps.subscription'
 ]
 
 MIDDLEWARE = [

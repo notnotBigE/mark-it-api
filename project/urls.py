@@ -20,6 +20,7 @@ urlpatterns = [
     url(r'^', include('apps.file.urls')),
     url(r'^', include('apps.socialmedia.urls')),
     url(r'^', include('apps.user.urls')),
+    url(r'^', include('apps.subscription.urls')),
 
     # Browsable API
     url(r'^api/$', api_root, name='index'),
